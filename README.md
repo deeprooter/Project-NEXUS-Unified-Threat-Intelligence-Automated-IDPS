@@ -13,9 +13,18 @@ This project documents the design and implementation of a centralized Security O
 **ChatOps Notification:** Splunk passes live, critical events directly to a dedicated Slack channel via incoming webhooks, keeping the administrator informed in real time.
 
 **Technology Stack**
-SIEM / EDR Engine: Wazuh (Manager & Agents)
-Log Aggregation & Analytics: Splunk Enterprise / Splunk Universal Forwarder
-Orchestration / Alerting Layer: Slack Webhooks (ChatOps)
-Target Environment: Linux-based Web Application Hosting Environment
 
-Threat Mitigation Scenarios Demonstrated
+**SIEM / EDR Engine:** Wazuh (Manager & Agents)
+
+**Log Aggregation & Analytics:** Splunk Enterprise / Splunk Universal Forwarder
+
+**Orchestration / Alerting Layer:** Webhooks (ChatOps)
+
+**Target Environment:** Linux-based Web Application Hosting Environment
+
+
+
+<img width="542" height="310" alt="image" src="https://github.com/user-attachments/assets/1fae6212-121e-4e2a-aa40-ebc433a8b990" />
+
+
+``Threat Mitigation Scenarios Demonstrated``
