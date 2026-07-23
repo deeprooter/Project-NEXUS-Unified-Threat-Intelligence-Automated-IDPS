@@ -22,17 +22,19 @@ This project documents the design and implementation of a centralized Security O
 
 
 ##  Intial Setup
+
+  <img width="542" height="310" alt="image" src="https://github.com/user-attachments/assets/1fae6212-121e-4e2a-aa40-ebc433a8b990" />
+
+##
 *    **Hardware:** Intel(R) Core(TM) i7-6920HQ CPU @ 2.90GHz
 *    **Platform OS:** Ubuntu 22.04.5 LTS (Jammy Jellyfish)
 *    **Wazuh:** WAZUH_VERSION="v4.14.5", WAZUH_REVISION="rc1"
 *    **Wazuh agents a.k.a Telemetry Endpoint:** There were few devices in my home network identifed as good candidates for the endpoints:
 
+<img width="796" height="264" alt="Screenshot from 2026-07-22 22-37-00" src="https://github.com/user-attachments/assets/3cb6f528-20cc-43b5-abe6-25437c222bfa" />
+
   
-##
 
-  <img width="542" height="310" alt="image" src="https://github.com/user-attachments/assets/1fae6212-121e-4e2a-aa40-ebc433a8b990" />
-
-##
 
 ```mermaid
 graph TD
