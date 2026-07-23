@@ -43,8 +43,14 @@ This project documents the design and implementation of a centralized Security O
 ##  Extended Setup
 Landing on the Wazuh Dashboard was flawless given the great documentation provided by Wazuh. I was able to see the telemetry projected in Wazuh server and built in rule based assementment conoilsted under Wazuh dashboard.
 Now I wanted to take this setup to next level where more devices/ resources will be added to the endpoint telemetry with Integration with Splunk.
-*    **Splunk Enterprize (trial version)**
-*    **
+*    **Orchestration/ SOAR Platform:** Splunk Enterprise, Version: 10.4.1 (trial version)
+*    **Web Resources:** Self hosted websites with Cloudflared reverse proxy (SSL/TLS supported)
+*    **DMZ Server:** Exposing the home network to the Internet
+*    **Alerting Layer:** Slack integration using webhooks https://slack.com/
+*    **Telemetry Endponits:** Identified additonal endpoints for better log aggregation.
+
+
+<img width="1264" height="842" alt="image" src="https://github.com/user-attachments/assets/2f0212ec-97bc-4605-a5de-d1d1da173d5b" />
 
 
 ```mermaid
@@ -77,3 +83,7 @@ graph TD
 
 
 ``Threat Mitigation Scenarios Demonstrated``
+
+<!-- Replace 'your-username' with your actual GitHub profile name -->
+
+[![Your GitHub stats](https://vercel.app)](https://github.com/deeprooter)
