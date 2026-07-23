@@ -31,19 +31,21 @@ This project documents the design and implementation of a centralized Security O
 *    **Wazuh:** WAZUH_VERSION="v4.14.5", WAZUH_REVISION="rc1"
 *    **Wazuh agents a.k.a Telemetry Endpoint:** There were few devices in my home network identifed as good candidates for the endpoints:
 
-<img width="796" height="264" alt="Screenshot from 2026-07-22 22-37-00" src="https://github.com/user-attachments/assets/3cb6f528-20cc-43b5-abe6-25437c222bfa" />
+<img width="596" height="164" alt="Screenshot from 2026-07-22 22-37-00" src="https://github.com/user-attachments/assets/3cb6f528-20cc-43b5-abe6-25437c222bfa" />
 
   
+###  Wazuh Dashboard
+<img width="925" height="453" alt="image" src="https://github.com/user-attachments/assets/935195c1-083c-4407-b880-549451166b1e" />
+
+<img width="923" height="443" alt="Wazuh-1" src="https://github.com/user-attachments/assets/c2b18993-e4b9-4e93-ad94-1a10c39d7492" />
 
 
-```mermaid
-graph TD
-    A[Host] -->|Telemetry & Logs| B(Wazuh Agent)
-    B --> C{Wazuh Manager}
-    C -->|Active Response: Intercept & Block Threat| A
-    C -->|High-Fidelity Alerts| D[Splunk Enterprise]
-    C -->|Webhook Trigger| E[Slack ChatOps Channel]
-```
+##  Extended Setup
+Landing on the Wazuh Dashboard was flawless given the great documentation provided by Wazuh. I was able to see the telemetry projected in Wazuh server and built in rule based assementment conoilsted under Wazuh dashboard.
+Now I wanted to take this setup to next level where more devices/ resources will be added to the endpoint telemetry with Integration with Splunk.
+*    **Splunk Enterprize (trial version)**
+*    **
+
 
 ```mermaid
 graph LR
@@ -60,6 +62,17 @@ graph LR
 
 ```
 
+
+---
+---
+```mermaid
+graph TD
+    A[Host] -->|Telemetry & Logs| B(Wazuh Agent)
+    B --> C{Wazuh Manager}
+    C -->|Active Response: Intercept & Block Threat| A
+    C -->|High-Fidelity Alerts| D[Splunk Enterprise]
+    C -->|Webhook Trigger| E[Slack ChatOps Channel]
+```
 
 
 
