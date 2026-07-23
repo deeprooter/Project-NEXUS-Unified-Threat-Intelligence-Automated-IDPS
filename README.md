@@ -15,10 +15,10 @@ This project documents the design and implementation of a centralized Security O
 
 ## Technology Stack
 
-*   **SIEM / EDR Engine:** Wazuh (Manager & Agents)
-*   **Log Aggregation & Analytics:** Splunk Enterprise / Splunk Universal Forwarder
-*   **Orchestration / Alerting Layer:** Webhooks (Slack ChatOps)
-*   **Target Environment:** Linux-based Web Application Hosting Environment
+*   **SIEM / EDR Engine:** Wazuh (Manager & Agents)     https://documentation.wazuh.com/current/getting-started/index.html
+*   **Log Aggregation & Analytics:** Splunk Enterprise / Splunk Universal Forwarder    https://www.splunk.com/ (requires registed accounted activated with Splunk support team)
+*   **Orchestration / Alerting Layer:** Webhooks (Slack ChatOps) (Github)    https://github.com/wazuh
+*   **Target Environment:** Linux-based Web Application Hosting Environment    https://releases.ubuntu.com/jammy/
 
 
 ##  Intial Setup
@@ -38,14 +38,27 @@ This project documents the design and implementation of a centralized Security O
 
 ```mermaid
 graph TD
-    A[Linux Web App Host] -->|Telemetry & Logs| B(Wazuh Agent)
+    A[Host] -->|Telemetry & Logs| B(Wazuh Agent)
     B --> C{Wazuh Manager}
-    C -->|Active Response: Block Threat| A
+    C -->|Active Response: Intercept & Block Threat| A
     C -->|High-Fidelity Alerts| D[Splunk Enterprise]
-    D -->|Webhook Trigger| E[Slack ChatOps Channel]
+    C -->|Webhook Trigger| E[Slack ChatOps Channel]
 ```
 
+```mermaid
+graph LR
+    A[Live Asset] -->|Telemetry & Logs| B(Wazuh Agent)
+    B --> C{Wazuh Manager}
+    C -->|Active Response: Intercept & Block Threat| A
+    C -->|Webhook Trigger| E[Slack ChatOps Channel]
 
+    subgraph F[Automated Response & Orchestration SOAR]
+        D[Splunk Enterprise]
+    end
+
+    C -->|High-Fidelity Alerts| D
+
+```
 
 
 
