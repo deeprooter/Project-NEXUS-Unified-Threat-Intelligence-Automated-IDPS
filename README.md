@@ -15,10 +15,10 @@ This project documents the design and implementation of a centralized Security O
 
 ## Technology Stack
 
-*   **SIEM / EDR Engine:** Wazuh (Manager & Agents)     https://documentation.wazuh.com/current/getting-started/index.html
-*   **Log Aggregation & Analytics:** Splunk Enterprise / Splunk Universal Forwarder    https://www.splunk.com/ (requires registed accounted activated with Splunk support team)
-*   **Orchestration / Alerting Layer:** Webhooks (Slack ChatOps) (Github)    https://github.com/wazuh
-*   **Target Environment:** Linux-based Web Application Hosting Environment    https://releases.ubuntu.com/jammy/
+*   **SIEM / EDR Engine:** ```Wazuh (Manager & Agents)```    https://documentation.wazuh.com/current/getting-started/index.html
+*   **Log Aggregation & Analytics:** ```Splunk Enterprise / Splunk Universal Forwarder (activated accounted arequired with Splunk support team)```    https://www.splunk.com/ 
+*   **Orchestration / Alerting Layer:** ```Webhooks (Slack ChatOps) (Github)```    https://github.com/wazuh
+*   **Target Environment:** ```Linux-based Web Application Hosting Environment```    https://releases.ubuntu.com/jammy/
 
 
 ##  Intial Setup
@@ -26,10 +26,10 @@ This project documents the design and implementation of a centralized Security O
   <img width="542" height="310" alt="image" src="https://github.com/user-attachments/assets/1fae6212-121e-4e2a-aa40-ebc433a8b990" />
 
 ##
-*    **Hardware:** Intel(R) Core(TM) i7-6920HQ CPU @ 2.90GHz
-*    **Platform OS:** Ubuntu 22.04.5 LTS (Jammy Jellyfish)
-*    **Wazuh:** WAZUH_VERSION="v4.14.5", WAZUH_REVISION="rc1"
-*    **Wazuh agents a.k.a Telemetry Endpoint:** There were few devices in my home network identifed as good candidates for the endpoints:
+*    **Hardware:** ```Intel(R) Core(TM) i7-6920HQ CPU @ 2.90GHz```
+*    **Platform OS:** ```Ubuntu 22.04.5 LTS (Jammy Jellyfish)```
+*    **Wazuh:** ```WAZUH_VERSION="v4.14.5", WAZUH_REVISION="rc1"```
+*    **Wazuh agents a.k.a Telemetry Endpoint:** ```There were few devices in my home network identifed as good candidates for the endpoints```
 
 <img width="596" height="164" alt="Screenshot from 2026-07-22 22-37-00" src="https://github.com/user-attachments/assets/3cb6f528-20cc-43b5-abe6-25437c222bfa" />
 
@@ -41,17 +41,20 @@ This project documents the design and implementation of a centralized Security O
 
 
 ##  Extended Setup
-Landing on the Wazuh Dashboard was flawless given the great documentation provided by Wazuh. I was able to see the telemetry projected in Wazuh server and built in rule based assementment conoilsted under Wazuh dashboard.
+Landing on the Wazuh Dashboard was flawless, thanks to the excellent documentation provided by Wazuh. I was able to see the telemetry projected in the Wazuh server, with the built-in, rule-based assessment consolidated under the Wazuh dashboard.
+
 Now I wanted to take this setup to next level where more devices/ resources will be added to the endpoint telemetry with Integration with Splunk.
-*    **Orchestration/ SOAR Platform:** Splunk Enterprise, Version: 10.4.1 (trial version)
-*    **Web Resources:** Self hosted websites with Cloudflared reverse proxy (SSL/TLS supported)
-*    **DMZ Server:** Exposing the home network to the Internet
-*    **Alerting Layer:** Slack integration using webhooks https://slack.com/
-*    **Telemetry Endponits:** Identified additonal endpoints for better log aggregation.
 
+*    **Orchestration/ SOAR Platform:** ```Splunk Enterprise, Version: 10.4.1 (trial version)```
+*    **Web Resources:** ```Self hosted websites with Cloudflared reverse proxy (SSL/TLS supported)```
+*    **DMZ Server:** ```Exposing the home network to the Internet
+*    **Alerting Layer:** ```Slack integration using webhooks``` https://slack.com/
+*    **Telemetry Endponits:** ```Identified additonal endpoints for better log aggregation```
 
+##    Network Topology for my homelab
 <img width="1264" height="842" alt="image" src="https://github.com/user-attachments/assets/2f0212ec-97bc-4605-a5de-d1d1da173d5b" />
 
+##    Incident Detection Workflow
 
 ```mermaid
 graph LR
@@ -65,20 +68,10 @@ graph LR
     end
 
     C -->|High-Fidelity Alerts| D
-
 ```
 
 
----
----
-```mermaid
-graph TD
-    A[Host] -->|Telemetry & Logs| B(Wazuh Agent)
-    B --> C{Wazuh Manager}
-    C -->|Active Response: Intercept & Block Threat| A
-    C -->|High-Fidelity Alerts| D[Splunk Enterprise]
-    C -->|Webhook Trigger| E[Slack ChatOps Channel]
-```
+
 
 
 
