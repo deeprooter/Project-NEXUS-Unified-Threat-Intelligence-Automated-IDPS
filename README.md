@@ -97,8 +97,11 @@ graph LR
     C -->|High-Fidelity Alerts| D
 ```
 
-## Dashboards
+## Dashboards & Visualization
+The Splunk dashboard provides high-level visibility into network authentication attempts:Total Failed Logins: Single-value visualization tracking attack volume.Top Attacking IPs: Bar chart mapping the origin of brute force traffic.Mitigation Status: Time-chart showing active firewall blocks over time.
+
 https://github.com/deeprooter/Project-NEXUS-Unified-Threat-Intelligence-Automated-IDPS/blob/main/Resources/Wazuh_Dashboard.png
+
 
 ## Resources
 *   **Wazuh**  https://documentation.wazuh.com/current/getting-started/index.html
