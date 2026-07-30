@@ -15,10 +15,10 @@ This project documents the design and implementation of a centralized Security O
 
 ## Technology Stack
 
-*   **SIEM / EDR Engine:** ```Wazuh (Manager & Agents)```    https://documentation.wazuh.com/current/getting-started/index.html
-*   **Log Aggregation & Analytics:** ```Splunk Enterprise / Splunk Universal Forwarder (activated accounted arequired with Splunk support team)```    https://www.splunk.com/ 
-*   **Orchestration / Alerting Layer:** ```Webhooks (Slack ChatOps) (Github)```    https://github.com/wazuh
-*   **Target Environment:** ```Linux-based Web Application Hosting Environment```    https://releases.ubuntu.com/jammy/
+*   **SIEM / EDR Engine:** ```Wazuh (Manager & Agents)```
+*   **Log Aggregation & Analytics:** ```Splunk Enterprise / Splunk Universal Forwarder (activated accounted required with Splunk support team)```
+*   **Orchestration / Alerting Layer:** ```Webhooks (Slack ChatOps) (Github)```
+*   **Target Environment:** ```Linux-based Web Application Hosting Environment```
 
 
 ##  Intial Setup
@@ -29,7 +29,7 @@ This project documents the design and implementation of a centralized Security O
 *    **Hardware:** ```Intel(R) Core(TM) i7-6920HQ CPU @ 2.90GHz```
 *    **Platform OS:** ```Ubuntu 22.04.5 LTS (Jammy Jellyfish)```
 *    **Wazuh:** ```WAZUH_VERSION="v4.14.5", WAZUH_REVISION="rc1"```
-*    **Wazuh agents a.k.a Telemetry Endpoint:** ```There were few devices in my home network identifed as good candidates for the endpoints```
+*    **Wazuh agents a.k.a. Telemetry Endpoint:** ```There were few devices in my home network identified as good candidates for the endpoints```
 
 <img width="596" height="164" alt="Screenshot from 2026-07-22 22-37-00" src="https://github.com/user-attachments/assets/3cb6f528-20cc-43b5-abe6-25437c222bfa" />
 
@@ -49,7 +49,7 @@ Now I wanted to take this setup to next level where more devices/ resources will
 *    **Web Resources:** ```Self hosted websites with Cloudflared reverse proxy (SSL/TLS supported)```
 *    **DMZ Server:** ```Exposing the home network to the Internet
 *    **Alerting Layer:** ```Slack integration using webhooks``` https://slack.com/
-*    **Telemetry Endponits:** ```Identified additonal endpoints for better log aggregation```
+*    **Telemetry Endpoints:** ```Identified additional endpoints for better log aggregation```
 
 ##    Network Topology for my homelab
 <img width="1264" height="842" alt="image" src="https://github.com/user-attachments/assets/2f0212ec-97bc-4605-a5de-d1d1da173d5b" />
@@ -70,13 +70,43 @@ graph LR
     C -->|High-Fidelity Alerts| D
 ```
 
+**Detection:**       A live asset sends activity data (telemetry and logs) to the Wazuh Agent.
+
+**Analysis:**        The agent forwards this data to the Wazuh Manager to check for threats.
+
+**Mitigation:**      If a threat is found, the Wazuh Manager automatically triggers an Active Response to block the threat directly on the asset.
+
+**Notification:**    The manager simultaneously sends a Webhook Trigger to alert a Slack ChatOps Channel.
+
+**Deep Analysis:**   High-fidelity alerts are sent to Splunk Enterprise (within the SOAR subgraph) for advanced orchestration and data retention.
 
 
-**In Progress**
+
+```mermaid
+graph LR
+    
+    B[Wazuh Pipeline] --> C{Wazuh Manager}
+    C -->|Active Response: Intercept & Block Threat| A[Threat Neutralized]
+    C -->|Webhook Trigger| E[Slack ChatOps Channel/ admin acquaintance]
+
+    subgraph F[Automated Response & Orchestration SOAR]
+        D[Splunk Enterprise] -->|Trigger Playbook| G[Shuffle SOAR Engine]
+        G -->|Create Case| H[TheHive Case Management]
+    end
+
+    C -->|High-Fidelity Alerts| D
+```
 
 
-``Threat Mitigation Scenarios Demonstrated``
+## Resources
+*   **Wazuh**  https://documentation.wazuh.com/current/getting-started/index.html
+*   **Splunk** https://www.splunk.com/ 
+*   **Github** https://github.com/wazuh
+*   **Slack**  https://slack.com/get-started
+*   **Ubuntu** https://releases.ubuntu.com/jammy/
+
+
 
 <!-- Replace 'your-username' with your actual GitHub profile name -->
 
-[![Your GitHub stats](https://vercel.app)](https://github.com/deeprooter)
+[![Your GitHub stats](https://vercel.app)](https://github.com/deeprooter/)
