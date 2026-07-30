@@ -110,7 +110,7 @@ https://github.com/deeprooter/Project-NEXUS-Unified-Threat-Intelligence-Automate
 *   **Slack**  https://slack.com/get-started
 *   **Ubuntu** https://releases.ubuntu.com/jammy/
 
-
+ossec.conf
 
 <!-- Replace 'your-username' with your actual GitHub profile name -->
 
