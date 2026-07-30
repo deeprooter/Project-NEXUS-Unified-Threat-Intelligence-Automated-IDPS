@@ -97,6 +97,8 @@ graph LR
     C -->|High-Fidelity Alerts| D
 ```
 
+## Dashboards
+https://github.com/deeprooter/Project-NEXUS-Unified-Threat-Intelligence-Automated-IDPS/blob/main/Resources/Wazuh_Dashboard.png
 
 ## Resources
 *   **Wazuh**  https://documentation.wazuh.com/current/getting-started/index.html
