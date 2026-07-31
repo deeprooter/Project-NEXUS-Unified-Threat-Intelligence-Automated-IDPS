@@ -22,8 +22,9 @@ This project documents the design and implementation of a centralized Security O
 
 
 ##  Intial Setup
-
+<p align="center">
   <img width="542" height="310" alt="image" src="https://github.com/user-attachments/assets/1fae6212-121e-4e2a-aa40-ebc433a8b990" />
+</p>
 
 ##
 *    **Hardware:** ```Intel(R) Core(TM) i7-6920HQ CPU @ 2.90GHz```
@@ -31,13 +32,15 @@ This project documents the design and implementation of a centralized Security O
 *    **Wazuh:** ```WAZUH_VERSION="v4.14.5", WAZUH_REVISION="rc1"```
 *    **Wazuh agents a.k.a. Telemetry Endpoint:** ```There were few devices in my home network identified as good candidates for the endpoints```
 
-<img width="596" height="164" alt="Screenshot from 2026-07-22 22-37-00" src="https://github.com/user-attachments/assets/3cb6f528-20cc-43b5-abe6-25437c222bfa" />
-
   
-###  Wazuh Dashboard
-<img width="925" height="453" alt="image" src="https://github.com/user-attachments/assets/935195c1-083c-4407-b880-549451166b1e" />
+<p align="center">
+<img width="596" height="164" alt="Screenshot from 2026-07-22 22-37-00" src="https://github.com/user-attachments/assets/3cb6f528-20cc-43b5-abe6-25437c222bfa" />
+</p>
+  
 
-<img width="923" height="443" alt="Wazuh-1" src="https://github.com/user-attachments/assets/c2b18993-e4b9-4e93-ad94-1a10c39d7492" />
+<!-- <img width="925" height="453" alt="image" src="https://github.com/user-attachments/assets/935195c1-083c-4407-b880-549451166b1e" /> -->
+
+<!-- <img width="923" height="443" alt="Wazuh-1" src="https://github.com/user-attachments/assets/c2b18993-e4b9-4e93-ad94-1a10c39d7492" /> -->
 
 
 ##  Extended Setup
@@ -52,7 +55,9 @@ Now I wanted to take this setup to next level where more devices/ resources will
 *    **Telemetry Endpoints:** ```Identified additional endpoints for better log aggregation```
 
 ##    Network Topology for my homelab
+<p align="center">
 <img width="1264" height="842" alt="image" src="https://github.com/user-attachments/assets/2f0212ec-97bc-4605-a5de-d1d1da173d5b" />
+</p>
 
 ##    Incident Detection Workflow
 
