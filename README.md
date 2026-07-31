@@ -112,7 +112,20 @@ Total Failed Logins: Single-value visualization tracking attack volume.Top Attac
 
 ![Alt Text](https://github.com/deeprooter/Project-NEXUS-Unified-Threat-Intelligence-Automated-IDPS/blob/main/Resources/Wazuh_Dashboard.png)
 
+### Wazuh Nodes
+![Alt Text](https://github.com/deeprooter/Project-NEXUS-Unified-Threat-Intelligence-Automated-IDPS/blob/main/Resources/Wazuh-Nodes.png)
 
+### Wazuh Alerts
+![Alt Text](https://github.com/deeprooter/Project-NEXUS-Unified-Threat-Intelligence-Automated-IDPS/blob/main/Resources/Wazuh-Alerts.png)
+
+### Threat Alerts
+![Alt Text](https://github.com/deeprooter/Project-NEXUS-Unified-Threat-Intelligence-Automated-IDPS/blob/main/Resources/Threat-Hunt-Overall-Dashboard.png)
+
+### Splunk Integration
+![Alt Text](https://github.com/deeprooter/Project-NEXUS-Unified-Threat-Intelligence-Automated-IDPS/blob/main/Resources/Splunk-Custom-Dashboard.png)
+
+### Slack Integration
+![Alt Text](https://github.com/deeprooter/Project-NEXUS-Unified-Threat-Intelligence-Automated-IDPS/blob/main/Resources/Slack-Integration.png)
 
 ## Resources
 *   **Wazuh**  https://documentation.wazuh.com/current/getting-started/index.html
