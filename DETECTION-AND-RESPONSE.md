@@ -25,7 +25,30 @@ An external or internal threat actor attempt to gain unauthorized access to your
 
 Wazuh Search Query (WSR)
 
+### file
 
+```bash
+/var/ossec/etc/rules/local_rules.xml
+```
+
+### Detection Rule
+
+```bash
+<group name="jellyfin">
+  <rule id="100099" level="5">
+    <decoded_as>jellyfin</decoded_as>
+    <description>Jellyfin login failure for user $(dstuser)</description>
+    <group>authentication_failed</group>
+  </rule>
+
+  <rule id="100100" level="10" frequency="4" timeframe="180">
+    <if_matched_sid>100099</if_matched_sid>
+    <same_source_ip />
+    <description>Jellyfin: Brute-force attack detected from $(srcip)</description>
+    <group>authentication_failed,brute_force</group>
+  </rule>
+</group>
+```
 
 
 Splunk Search Query (SPL)
