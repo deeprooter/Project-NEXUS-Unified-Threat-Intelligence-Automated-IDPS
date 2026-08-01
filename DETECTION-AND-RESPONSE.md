@@ -50,6 +50,24 @@ Wazuh Search Query (WSR)
 </group>
 ```
 
+### Decoder
+```bash
+/var/ossec/etc/decoders/local_decoder.xml
+```
+```bash
+decoder name="jellyfin">
+  <prematch>Authentication request for </prematch>
+</decoder>
+
+<decoder name="jellyfin_fields">
+  <parent>jellyfin</parent>
+  <regex>Authentication request for "(\S+)" has been denied \(IP: "(\S+)"\)</regex>
+  <order>dstuser, srcip</order>
+</decoder>
+```
+
+
+
 ### Savior command from errors
 ```bash
 sudo /var/ossec/bin/wazuh-logtest -t
