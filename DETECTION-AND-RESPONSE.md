@@ -54,8 +54,9 @@ Wazuh Search Query (WSR)
 ```bash
 /var/ossec/etc/decoders/local_decoder.xml
 ```
+
 ```bash
-decoder name="jellyfin">
+<decoder name="jellyfin">
   <prematch>Authentication request for </prematch>
 </decoder>
 
