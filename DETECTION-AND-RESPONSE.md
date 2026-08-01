@@ -50,6 +50,10 @@ Wazuh Search Query (WSR)
 </group>
 ```
 
+### Savior command from errors
+```bash
+sudo /var/ossec/bin/wazuh-logtest -t
+```
 
 Splunk Search Query (SPL)
 
