@@ -53,6 +53,8 @@ Wazuh Search Query (WSR)
 ### Savior command from errors
 ```bash
 sudo /var/ossec/bin/wazuh-logtest -t
+sudo /var/ossec/bin/wazuh-analysisd -t
+
 ```
 
 Splunk Search Query (SPL)
