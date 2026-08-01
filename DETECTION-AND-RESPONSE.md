@@ -74,6 +74,8 @@ Wazuh Search Query (WSR)
 sudo /var/ossec/bin/wazuh-logtest -t
 sudo /var/ossec/bin/wazuh-analysisd -t
 
+sudo /var/ossec/bin/wazuh-logtest
+    Jul 31 23:25:00 DELLBOX 10.21.121.67:55526 10.21.189.78:514 UDP
 ```
 
 Splunk Search Query (SPL)
