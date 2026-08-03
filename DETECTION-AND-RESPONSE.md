@@ -146,10 +146,13 @@ By feeding these raw test events into the interactive terminal session, three ke
 Isolates all security events generated when the threshold-based brute force alert triggers.
 
 ```splunk
-index=wazuh rule.id=100100
-| table _time, srcip, dstuser, rule.description, rule.level
-| sort - _time
+index=main rule.id=100100 rule.groups{}="brute_force"
+| table _time agent.name data.srcip rule.description
+| rename agent.name as "Target Server", data.srcip as "Blocked Attacker IP", rule.description as "Action Taken"
 ```
+
+> **Actual SIEM Output**
+![Alt Text](https://github.com/deeprooter/Project-NEXUS-Unified-Threat-Intelligence-Automated-IDPS/blob/main/Resources/Splunk-SPL-Query-Brute-Attack.png)
 
 ### Top Attacker IP Address Profiles
 Aggregates attacks to pinpoint the most aggressive offending source nodes attempting intrusion.
@@ -160,4 +163,15 @@ index=wazuh rule.id=100100
 | rename srcip AS "Attacker IP", count AS "Total Brute Force Alerts"
 | sort - "Total Brute Force Alerts"
 ```
-> **Actual SIEM Output - Top Attacker IP Analysis:** 
+> **Actual SIEM Output**
+> ![Alt Text](https://github.com/deeprooter/Project-NEXUS-Unified-Threat-Intelligence-Automated-IDPS/blob/main/Resources/Top-Attacker-IP-Address-Profiles.png)
+
+
+### Wazuh Triage View
+> **Actual SIEM Output**
+> ![Alt Text](https://github.com/deeprooter/Project-NEXUS-Unified-Threat-Intelligence-Automated-IDPS/blob/main/Resources/Usr-Auth-2.png)
+
+
+
+```EOF```
+
