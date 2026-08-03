@@ -21,9 +21,27 @@ An external or internal threat actor attempt to gain unauthorized access to your
 1. Wazuh agent monitors /var/log/auth.log.
 2. Repeated failed login attempts trigger Wazuh Rule 5712 (SSHD brute force).
 3. Wazuh generates an alert event.
-4. Event is forwarded to Splunk in real-time.
+5. Event is forwarded to Splunk in real-time.
+6. Event delivered to Slack platform.
 
-Wazuh Search Query (WSR)
+## Pipeline Breakdown 
+**Log Ingestion:** The Wazuh agent continuously monitors the system authentication log (/var/log/auth.log) for real-time tracking of login activity.
+
+**Threshold Evaluation:** When a threshold of consecutive failed login attempts is breached within a specific time window, Wazuh correlates the activity and fires Rule 5712 (indicating an SSH brute-force attack attempt).
+
+**Alert Generation:** Wazuh converts the matched rule condition into a structured security alert event containing source IP, username, and timestamp metadata.
+
+**Forwarding:** The agent or manager streams this alert event in real-time to Splunk via API, syslog, or a dedicated forwarder for centralized log management.
+
+**Wazuh Search Query (WSR):** A specific syntax or query filter used within the Wazuh or Splunk dashboard to isolate, verify, and retrieve these exact Rule 5712 log occurrences during an investigation.
+
+
+
+
+
+
+
+
 
 ### file
 
