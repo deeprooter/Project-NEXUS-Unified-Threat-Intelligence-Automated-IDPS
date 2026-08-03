@@ -126,15 +126,22 @@ Total Failed Logins: Single-value visualization tracking attack volume.Top Attac
 ### Slack Integration
 ![Alt Text](https://github.com/deeprooter/Project-NEXUS-Unified-Threat-Intelligence-Automated-IDPS/blob/main/Resources/Slack-Integration.png)
 
-## Resources
+
+# Engineering References & Resources
+*   **Wazuh Documentation Core:** [Wazuh Installation & Configuration Manual](https://documentation.wazuh.com/current/getting-started/index.html)
+*   **Splunk Platform Services:** [Splunk Enterprise Analytics Portal](https://www.splunk.com/)
+*   **Wazuh Engineering Projects:** [Official Wazuh GitHub Workspace](https://github.com/wazuh)
+*   **Slack Workspace Deployments:** [Slack ChatOps Webhook Guide](https://slack.com/get-started)
+*   **Platform Operating Systems:** [Ubuntu Jammy Jellyfish Release Node](https://releases.ubuntu.com/jammy/)
 *   **Wazuh**  https://documentation.wazuh.com/current/getting-started/index.html
 *   **Splunk** https://www.splunk.com/ 
 *   **Github** https://github.com/wazuh
 *   **Slack**  https://slack.com/get-started
 *   **Ubuntu** https://releases.ubuntu.com/jammy/
+---
 
-ossec.conf
+[![Your GitHub stats](https://vercel.app)](https://github.com/deeprooter/Project-NEXUS-Unified-Threat-Intelligence-Automated-IDPS/tree/main)
 
 <!-- Replace 'your-username' with your actual GitHub profile name -->
 
-[![Your GitHub stats](https://vercel.app)](https://github.com/deeprooter/)
+<!-- [![Your GitHub stats](https://vercel.app)](https://github.com/deeprooter/) -->
