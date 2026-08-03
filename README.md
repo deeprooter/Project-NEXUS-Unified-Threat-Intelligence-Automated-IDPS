@@ -50,7 +50,7 @@ Now I wanted to take this setup to next level where more devices/ resources will
 
 *    **Orchestration/ SOAR Platform:** ```Splunk Enterprise, Version: 10.4.1 (trial version)```
 *    **Web Resources:** ```Self hosted websites with Cloudflared reverse proxy (SSL/TLS supported)```
-*    **DMZ Server:** ```Exposing the home network to the Internet
+*    **DMZ Server:** ```Exposing the home network to the Internet```
 *    **Alerting Layer:** ```Slack integration using webhooks``` https://slack.com/
 *    **Telemetry Endpoints:** ```Identified additional endpoints for better log aggregation```
 
