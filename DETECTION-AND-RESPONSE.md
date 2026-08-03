@@ -64,7 +64,7 @@ graph LR
 ## Technical Configuration
 
 ### 1. Custom Rules
-**File Path:** `/var/ossec/etc/rules/local_rules.xml`
+> **File Path:** `/var/ossec/etc/rules/local_rules.xml`
 
 ```xml
 <group name="jellyfin">
@@ -84,7 +84,7 @@ graph LR
 ```
 
 ### 2. Custom Decoders
-**File Path:** `/var/ossec/etc/decoders/local_decoder.xml`
+> **File Path:** `/var/ossec/etc/decoders/local_decoder.xml`
 
 ```xml
 <decoder name="jellyfin">
@@ -160,3 +160,4 @@ index=wazuh rule.id=100100
 | rename srcip AS "Attacker IP", count AS "Total Brute Force Alerts"
 | sort - "Total Brute Force Alerts"
 ```
+> **Actual SIEM Output - Top Attacker IP Analysis:** 
