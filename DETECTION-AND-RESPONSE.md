@@ -1,7 +1,7 @@
 # Project-NEXUS: Unified-Threat-Intelligence-Automated-IDPS
 An ISO/SAE 21434-aligned SIEM/SOAR infrastructure using Wazuh, Splunk, and ChatOps automation.
 
-# SecOps Automated Detection & Mitigation Pipeline
+## SecOps Automated Detection & Mitigation Pipeline
 
 ## Introduction
 As self-hosted infrastructure components become central points of entry for home and enterprise networks, secure web-facing applications like the Jellyfin Home Media Server face constant exposure to external security threats. Among these vectors, automated dictionary and brute-force attacks represent a highly prevalent method used by malicious actors to compromise user accounts and gain unauthorized access to underlying server resources.
