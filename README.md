@@ -89,7 +89,6 @@ graph LR
 
 ```mermaid
 graph LR
-    
     B[Wazuh Pipeline] --> C{Wazuh Manager}
     C -->|Active Response: Intercept & Block Threat| A[Threat Neutralized]
     C -->|Webhook Trigger| E[Slack ChatOps Channel/ admin acquaintance]
